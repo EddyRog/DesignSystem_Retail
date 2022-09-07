@@ -13,6 +13,8 @@
 		C8CCF6DA28C8A25A00AF68EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8CCF6D928C8A25A00AF68EA /* Preview Assets.xcassets */; };
 		C8CCF6E428C8C23400AF68EA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6E328C8C23400AF68EA /* Utils.swift */; };
 		C8CCF6E628C8D03100AF68EA /* TabViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6E528C8D03100AF68EA /* TabViewComponent.swift */; };
+		C8CCF6E928C8D13100AF68EA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6E828C8D13100AF68EA /* CardView.swift */; };
+		C8CCF6EB28C8D1A700AF68EA /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6EA28C8D1A700AF68EA /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		C8CCF6D928C8A25A00AF68EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8CCF6E328C8C23400AF68EA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C8CCF6E528C8D03100AF68EA /* TabViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewComponent.swift; sourceTree = "<group>"; };
+		C8CCF6E828C8D13100AF68EA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C8CCF6EA28C8D1A700AF68EA /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			children = (
 				C8CCF6D428C8A25800AF68EA /* MainView.swift */,
 				C8CCF6E528C8D03100AF68EA /* TabViewComponent.swift */,
+				C8CCF6E728C8D0C900AF68EA /* Components */,
 				C8CCF6E228C8A64E00AF68EA /* Utils */,
 			);
 			path = Views;
@@ -93,8 +98,17 @@
 			isa = PBXGroup;
 			children = (
 				C8CCF6E328C8C23400AF68EA /* Utils.swift */,
+				C8CCF6EA28C8D1A700AF68EA /* Helper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C8CCF6E728C8D0C900AF68EA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C8CCF6E828C8D13100AF68EA /* CardView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +185,8 @@
 				C8CCF6D328C8A25800AF68EA /* DesignSystemRetailApp.swift in Sources */,
 				C8CCF6E628C8D03100AF68EA /* TabViewComponent.swift in Sources */,
 				C8CCF6E428C8C23400AF68EA /* Utils.swift in Sources */,
+				C8CCF6E928C8D13100AF68EA /* CardView.swift in Sources */,
+				C8CCF6EB28C8D1A700AF68EA /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

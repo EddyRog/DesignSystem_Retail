@@ -11,11 +11,11 @@ struct TabViewComponent: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("CardView Lien") {
-                    Text("CardView")
+                NavigationLink("CardView") {
+                    CardView()
                 }
-                NavigationLink("View") {
-                    Text("View")
+                NavigationLink("OtherView") {
+                    Text("OtherView")
                 }
             }
 
@@ -24,3 +24,13 @@ struct TabViewComponent: View {
         .navigationTitle("Component")
     }
 }
+
+
+// ⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬
+#if DEBUG
+struct TabViewComponent_Previews: PreviewProvider {
+    static var previews: some View {
+        TabViewComponent()
+    }
+}
+#endif
