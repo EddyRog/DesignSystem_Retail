@@ -20,7 +20,7 @@ struct MainView: View {
                 .foregroundColor(Color.black)
             Text("Home")
                 .tabItem {
-                    Image("TabItemComponent")
+                    Image(systemName: "house")
                     Text("Home")
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -28,69 +28,16 @@ struct MainView: View {
                 .foregroundColor(Color.black)
         }
         .tabBarStyle(
-            backgroundColor: Color(uiColor: UIColor.black),
-            itemColor: Color(uiColor: UIColor.green),
-            selectedItemColor: Color(uiColor: .red),
-            badgeColor: Color(uiColor: .systemPink)
+            backgroundColor: Color("TabBarBackground"),
+            itemColor: Color("TabBarItemUnselected"),
+            selectedItemColor: Color("TabBarItemSelected"),
+            badgeColor: Color("TabBarBadge")
         )
-//        .tabBarStyle(backgroundColor: Color(UIColor.brown), itemColor: nil, selectedItemColor: nil, badgeColor: nil)
-
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-    }
-}
-
-
-
-// ==================
-// MARK: - TabBar
-// ==================
-// ==================
-// MARK: - TabBar
-// ==================
-extension View {
-    func tabBarStyle(backgroundColor: Color? = nil, itemColor: Color? = nil, selectedItemColor: Color? = nil, badgeColor: Color? = nil) -> some View {
-        onAppear {
-			// --- item.
-            let itemAppearance: UITabBarItemAppearance = UITabBarItemAppearance()
-
-            // --- itemColor.
-            if let itemColor = itemColor {
-                itemAppearance.normal.iconColor = UIColor(itemColor)
-                itemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor(itemColor)]
-            }
-
-            if let selectedColor = selectedItemColor {
-                itemAppearance.selected.iconColor = UIColor(selectedColor)
-                itemAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor(selectedColor)]
-            }
-
-            if let badgeColor = badgeColor {
-                itemAppearance.normal.badgeBackgroundColor = UIColor(badgeColor)
-                itemAppearance.selected.badgeBackgroundColor = UIColor(badgeColor)
-            }
-
-            // --- bar.
-            let appearance = UITabBarAppearance()
-            appearance.configureWithOpaqueBackground()
-
-			// --- background.
-            if let backgroundColor = backgroundColor {
-                let uiColor = UIColor(backgroundColor)
-                appearance.backgroundColor = uiColor
-            }
-
-            // --- Appearance -> ItemAppearance.
-            appearance.stackedLayoutAppearance = itemAppearance
-            appearance.inlineLayoutAppearance = itemAppearance
-            appearance.compactInlineLayoutAppearance = itemAppearance
-
-            UITabBar.appearance().standardAppearance = appearance
-            UITabBar.appearance().scrollEdgeAppearance = appearance
-        }
     }
 }
