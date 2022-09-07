@@ -10,14 +10,11 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-			Text("Component")
+            TabViewComponent()
                 .tabItem {
                     Image("TabItemComponent")
                     Text("Component")
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.brown)
-                .foregroundColor(Color.black)
             Text("Home")
                 .tabItem {
                     Image(systemName: "house")
