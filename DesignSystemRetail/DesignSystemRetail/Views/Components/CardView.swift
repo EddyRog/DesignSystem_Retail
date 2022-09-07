@@ -23,19 +23,20 @@ struct CardView: View {
                 Text("Title")
                     .padding([.leading, .trailing, .top])
                     .frame(maxWidth: .infinity, alignment: CardView.alignment)
-                    .debugViewColor()
+//                    .debugViewColor()
                     .dsFontStyle(.title)
                     .foregroundColor(Color.white)
                 // --- Sub Title.
                 Text("Short introduction")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: CardView.alignment)
-                    .debugViewColor()
+//                    .debugViewColor()
             }
         }
-        .background(Color.brown)
-        .clipShape(RoundedRectangle(cornerRadius: 30))
-        .shadow(radius: 8)
+        .background(Color("TabBarItemUnselected"))
+        .clipShape(
+            RoundedRectangle(cornerRadius: 20)
+        )
     }
 }
 

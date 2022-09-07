@@ -94,6 +94,15 @@ public enum DSSpacing {
     public static let xxl: Double = 40
 }
 
+public enum DSFontSize {
+    public static let xs: Double = 10
+    public static let s: Double = 13
+    public static let m: Double = 15 // body
+    public static let l: Double = 20 // subTitle
+    public static let xl: Double = 28 // title
+    public static let xxl: Double = 36
+}
+
 
 // ==================
 // MARK: - DSFontStyle
@@ -111,5 +120,25 @@ public enum DSFontStyle: String, CaseIterable {
 extension View {
     public func dsFontStyle(_ dsFontStyle: DSFontStyle) -> some View {
         font(dsFontStyle.font)
+    }
+}
+
+
+// ==================
+// MARK: - Corner raduis custom
+// ==================
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+}
+/// ▶ Define each corner with a size.
+struct RoundedCorner: Shape {
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
     }
 }

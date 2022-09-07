@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct MainView: View {
+    @State private var selectedTabIndex = 1
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTabIndex) {
             TabViewComponent()
                 .tabItem {
                     Image("TabItemComponent")
                     Text("Component")
                 }
-            Text("Home")
+                .tag(0)
+            TabViewHome()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.brown)
-                .foregroundColor(Color.black)
+                .tag(1)
         }
         .tabBarStyle(
             backgroundColor: Color("TabBarBackground"),
