@@ -8,39 +8,51 @@
 import SwiftUI
 
 struct CardView: View {
-    let insets = EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-    static let alignment: Alignment = .leading
+    let insetsTitle = EdgeInsets(top: DSSpacing.s, leading: DSSpacing.none, bottom: DSSpacing.none, trailing: DSSpacing.none)
+    let insetsSubTitle = EdgeInsets(top: DSSpacing.none, leading: DSSpacing.none, bottom: DSSpacing.s, trailing: DSSpacing.none)
+    let containerTitleSubtitleInset = EdgeInsets(top: DSSpacing.none, leading: DSSpacing.s, bottom: DSSpacing.none, trailing: DSSpacing.s)
+    let lineWidth: CGFloat = 20
+    let colorLineWidth = Color.gray
+//    var deltaPaddingForStroke: CGFloat {
+//        get {
+//            (lineWidth / 3 )
+//        }
+//    } // between the inside and the outside of the view, need to remove the delta to avoid seeing the image overflow
+    var paddingForLineWidth: CGFloat {
+        get {
+            (lineWidth / CGFloat.pi)
+        }
+    }
+
+
     // --- Config.
     // some View = of protocol type
     var body: some View {
-        VStack(spacing: DSSpacing.none) {
+
+        VStack(alignment: .leading, spacing: DSSpacing.none) {
             // --- image.
             Image("EmptyPicture")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .cornerRadius(DSRadiusSize.normal, corners: [.topLeft, .topRight])
 
+            // --- Container Text.
             VStack(alignment: .leading, spacing: DSSpacing.none) {
-                // --- Title.
                 Text("Title")
-                    .padding([.leading, .trailing, .top])
-                    .frame(maxWidth: .infinity, alignment: CardView.alignment)
-//                    .debugViewColor()
-                    .dsFontStyle(.title)
-                    .foregroundColor(Color.black)
-
-                // --- Sub Title.
-                Text("Short introduction")
-                    .padding()
-                    .frame(maxWidth: .infinity, alignment: CardView.alignment)
-//                    .debugViewColor()
+                    .font(.title3)
+                    .fontWeight(.light)
+                    .lineLimit(1)
+                    .padding(insetsTitle)
+                Text("Short introduction Short introductionShort introductionShort introductionShort introductionShort introductionShort introductionShort introductionShort introduction")
+                    .font(.footnote)
+                    .fontWeight(.light)
+                    .lineLimit(1)
+                    .padding(insetsSubTitle)
             }
+            .padding(containerTitleSubtitleInset)
+            .background(Color.white)
         }
-        .background(.white)
-        .clipShape(
-            RoundedRectangle(cornerRadius: DSRadiusSize.normal)
-        )
-        .padding(insets)
-        .shadow(radius: 1)
+        .cornerRadius(DSRadiusSize.normal)
     }
 }
 

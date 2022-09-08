@@ -33,8 +33,8 @@ struct TabViewHome: View {
 
             // --- Bottom.
             ScrollView {
-                var spacingBetweenCardView: CGFloat = DSSpacing.m
-                var spacingBetweenRowOfCardView: CGFloat = DSSpacing.m
+                let spacingBetweenCardView: CGFloat = DSSpacing.m
+                let spacingBetweenRowOfCardView: CGFloat = DSSpacing.m
 
                 let columns = [
                     GridItem(.flexible(), spacing: spacingBetweenCardView, alignment: .topLeading),
@@ -43,16 +43,14 @@ struct TabViewHome: View {
 
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: spacingBetweenRowOfCardView) {
-                        ForEach(0..<6) { valueInt in
+                        ForEach(0..<3) { valueInt in
                             CardView()
                         }
                     }
                 }
             }
             .padding(EdgeInsets(top: DSSpacing.m, leading: DSSpacing.m, bottom: DSSpacing.none, trailing: DSSpacing.m))
-//            .background(Color.white) // to reactivate
-            .debugViewColor() // debug
-            .frame(maxHeight: .infinity)
+            .background(Color("BackgroundPrimary"))
             .cornerRadius(DSRadiusSize.normal, corners: [.topLeft, .topRight])
         }
         .background(Color.yellow)
