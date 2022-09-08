@@ -94,6 +94,7 @@ public enum DSSpacing {
     public static let xxl: Double = 40
 }
 
+/// ▶ FontSizing is used to the font size.
 public enum DSFontSize {
     public static let xs: Double = 10
     public static let s: Double = 13
@@ -102,6 +103,14 @@ public enum DSFontSize {
     public static let xl: Double = 28 // title
     public static let xxl: Double = 36
 }
+
+/// ▶ RadiusSize.
+public enum DSRadiusSize {
+    public static let small: Double = 10
+    public static let normal: Double = 20
+}
+
+
 
 
 // ==================

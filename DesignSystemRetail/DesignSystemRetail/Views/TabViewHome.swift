@@ -17,7 +17,7 @@ struct TabViewHome: View {
                     .scaledToFill()
                     .frame(width: 50, height: 50)
                     .background(.yellow)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .clipShape(RoundedRectangle(cornerRadius: DSRadiusSize.small))
                 Text("Hello, John")
                     .font(.system(size: DSFontSize.xl))
                     .foregroundColor(.white)
@@ -33,23 +33,27 @@ struct TabViewHome: View {
 
             // --- Bottom.
             ScrollView {
+                var spacingBetweenCardView: CGFloat = DSSpacing.m
+                var spacingBetweenRowOfCardView: CGFloat = DSSpacing.m
+
                 let columns = [
-                    GridItem(.flexible(), spacing: 20, alignment: .topLeading),
-                    GridItem(.flexible(), spacing: 20, alignment: .topLeading)
+                    GridItem(.flexible(), spacing: spacingBetweenCardView, alignment: .topLeading),
+                    GridItem(.flexible(), spacing: spacingBetweenCardView, alignment: .topLeading)
                 ]
 
                 ScrollView {
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(0..<5) { valueInt in
+                    LazyVGrid(columns: columns, spacing: spacingBetweenRowOfCardView) {
+                        ForEach(0..<6) { valueInt in
                             CardView()
                         }
                     }
                 }
             }
-            .padding()
-            .background(Color.white)
+            .padding(EdgeInsets(top: DSSpacing.m, leading: DSSpacing.m, bottom: DSSpacing.none, trailing: DSSpacing.m))
+//            .background(Color.white) // to reactivate
+            .debugViewColor() // debug
             .frame(maxHeight: .infinity)
-            .cornerRadius(20, corners: [.topLeft, .topRight])
+            .cornerRadius(DSRadiusSize.normal, corners: [.topLeft, .topRight])
         }
         .background(Color.yellow)
     }

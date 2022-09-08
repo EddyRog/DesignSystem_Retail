@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
+    let insets = EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
     static let alignment: Alignment = .leading
     // --- Config.
     // some View = of protocol type
@@ -25,7 +26,8 @@ struct CardView: View {
                     .frame(maxWidth: .infinity, alignment: CardView.alignment)
 //                    .debugViewColor()
                     .dsFontStyle(.title)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
+
                 // --- Sub Title.
                 Text("Short introduction")
                     .padding()
@@ -33,10 +35,12 @@ struct CardView: View {
 //                    .debugViewColor()
             }
         }
-        .background(Color("TabBarItemUnselected"))
+        .background(.white)
         .clipShape(
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: DSRadiusSize.normal)
         )
+        .padding(insets)
+        .shadow(radius: 1)
     }
 }
 
