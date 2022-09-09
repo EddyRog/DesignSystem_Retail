@@ -12,26 +12,44 @@ import SwiftUI
 // ==================
 // Impl Modifier : UnderWood
 struct DebugView: ViewModifier {
+
+    var isOn: Bool = false
+
     func body(content: Content) -> some View {
-        content
-            .frame(maxWidth: CGFloat.infinity)
-            .background(Color(UIColor.randomColor))// debug
+        if isOn {
+            content
+                .frame(maxWidth: CGFloat.infinity)
+                .background(Color(UIColor.randomColor))// debug
+        } else {
+            content
+        }
     }
 }
 struct DebugViewColor: ViewModifier {
+    var isOn: Bool = false
     func body(content: Content) -> some View {
-        content
-            .background(Color(UIColor.randomColor))// debug
+        if isOn {
+            content
+                .background(Color(UIColor.randomColor))// debug
+        } else {
+            content
+        }
     }
 }
 
+
+
+//var isDebug = true
+var isDebug = true
 // Add Modifier
 extension View {
-    func debugView() -> some View {
-        modifier(DebugView())
+    func debugView(isOn value: Bool = isDebug) -> some View {
+        modifier(DebugView(isOn: value))
     }
-    func debugViewColor() -> some View {
-        modifier(DebugViewColor())
+    func debugViewColor(isOn value: Bool = isDebug) -> some View {
+        modifier(DebugViewColor(isOn: value))
     }
 }
+
+
 

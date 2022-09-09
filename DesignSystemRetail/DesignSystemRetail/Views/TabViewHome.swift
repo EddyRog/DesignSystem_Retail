@@ -1,5 +1,5 @@
 //
-// TabViewHome.swift
+// TabViewHome1.swift
 // DesignSystemRetail
 // Created in 2022
 // Swift 5.0
@@ -8,52 +8,57 @@
 import SwiftUI
 
 struct TabViewHome: View {
+    private var spacingLayoutCard: CGFloat {
+        0
+    }
+    private var spacingBetweenCardView: CGFloat {
+        get {
+            spacingLayoutCard
+        }
+    }
+    private var spacingBetweenRowCardView: CGFloat {
+        get {
+            spacingLayoutCard
+        }
+    }
+    private var columns: [GridItem] {
+        get {
+            [
+                GridItem(.flexible(), spacing: spacingBetweenCardView, alignment: .topLeading),
+                GridItem(.flexible(), spacing: spacingBetweenCardView, alignment: .topLeading),
+            ]
+        }
+    }
+    private let iphonesImagesName = ["iphone-1","iphone-2","iphone-3","iphone-1","iphone-2","iphone-3"]
+    private let iphonesImagesName1 = ["Get for free the new iPhone 14","Get for free a mac","Hello world","Mac Book Pro 14'","Ipad air","iPhoneXS Pro max"]
+
     var body: some View {
-        VStack {
-            // --- Top.
-            VStack(alignment: .center, spacing: DSSpacing.none) {
-                Image("EmptyPicture")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 50, height: 50)
-                    .background(.yellow)
-                    .clipShape(RoundedRectangle(cornerRadius: DSRadiusSize.small))
-                Text("Hello, John")
-                    .font(.system(size: DSFontSize.xl))
-                    .foregroundColor(.white)
-                    .padding(.top, DSSpacing.s)
-                Text("since the 1500s, when an unknown printer took a galley of type an")
-                    .font(.system(size: DSFontSize.m))
-                    .foregroundColor(.white)
-                    .padding(.all, DSSpacing.s)
-                    .multilineTextAlignment(.center)
-            }
-            .frame(maxWidth: .infinity)
-            .background(Color.yellow)
 
-            // --- Bottom.
-            ScrollView {
-                let spacingBetweenCardView: CGFloat = DSSpacing.m
-                let spacingBetweenRowOfCardView: CGFloat = DSSpacing.m
+        ZStack {
+            VStack(spacing: 0) {
+                // MARK: - Header
+                HomeHeader()
 
-                let columns = [
-                    GridItem(.flexible(), spacing: spacingBetweenCardView, alignment: .topLeading),
-                    GridItem(.flexible(), spacing: spacingBetweenCardView, alignment: .topLeading)
-                ]
-
+                // MARK: - Items
                 ScrollView {
-                    LazyVGrid(columns: columns, spacing: spacingBetweenRowOfCardView) {
-                        ForEach(0..<3) { valueInt in
-                            CardView()
+                    // MARK: - Card00
+                    LazyVGrid(columns: columns, spacing: spacingBetweenRowCardView) {
+                        ForEach(0..<6) { index in
+                            CardView00(imageName: iphonesImagesName[index], title: iphonesImagesName1[index]) // to see shadow
                         }
                     }
                 }
+                .padding(.horizontal, 20)
+                .padding(.top, 40.0)
+                .frame(maxWidth: .infinity)
+                .background(.white)
+                .cornerRadius(40, corners: [.topLeft,.topRight])
+                .background(Color("Color-3")) // yellow behind corners
             }
-            .padding(EdgeInsets(top: DSSpacing.m, leading: DSSpacing.m, bottom: DSSpacing.none, trailing: DSSpacing.m))
-            .background(Color("BackgroundPrimary"))
-            .cornerRadius(DSRadiusSize.normal, corners: [.topLeft, .topRight])
+            // --
+
         }
-        .background(Color.yellow)
+        // --
     }
 }
 
@@ -62,3 +67,58 @@ struct TabViewHome_Previews: PreviewProvider {
         TabViewHome()
     }
 }
+
+struct HomeHeader: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "house")
+                .padding(.top, 10.0)
+                .padding(.bottom, 1.0)
+                .font(.system(size: 50))
+                .foregroundColor(.white)
+            Text("Hello, Jacob")
+                .fontWeight(.medium)
+                .foregroundColor(.white)
+                .lineLimit(1)
+                .font(.system(size: 40))
+            Text("Here'w what is new at Apple store")
+                .foregroundColor(.white)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.bottom, 40)
+        .background(Color("Color-3"))
+    }
+}
+struct CardView00: View {
+    var imageName: String
+    var title: String
+
+    var body: some View {
+        VStack(spacing: 0) {
+            Image(imageName)
+                .fitToAspectRatio(.square)
+            VStack(spacing: 0) {
+                Text(title)
+                    .frame(maxWidth: .infinity)
+                    .font(.system(size: 14))
+                    .foregroundColor(Color("Color-4"))
+                    .lineLimit(1)
+                    .frame(height: 40)
+            }
+            .padding(.horizontal, 10)
+//            .padding(.vertical, 5)
+        }
+        .cornerRadius(20)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .shadow(color: .gray, radius:6, x: 0, y: 2)
+        )
+        .padding(.all, 10)
+    }
+}
+
+
+// ==================
+// MARK: - Status bar style
+// ==================

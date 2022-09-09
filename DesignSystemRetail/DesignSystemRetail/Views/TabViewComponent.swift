@@ -9,20 +9,22 @@ import SwiftUI
 
 struct TabViewComponent: View {
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink("CardView") {
-                    CardView()
-                }
-                NavigationLink("OtherView") {
-                    Text("OtherView")
-                }
-            }
 
-        }
-        .listStyle(GroupedListStyle())
-        .navigationTitle("Component")
+            NavigationView {
+                List {
+                    NavigationLink("CardView") {
+                        CardView00(imageName: "EmptyPicture", title: "EmptyPicture")
+                    }
+                    NavigationLink("OtherView") {
+                        Text("OtherView")
+                    }
+                }
+
+            }
+            .listStyle(GroupedListStyle())
+            .navigationTitle("Component")
     }
+
 }
 
 

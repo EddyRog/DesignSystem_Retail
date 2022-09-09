@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct DesignSystemRetailApp: App {
+    @AppStorage("keyDebug") var keyDebug: Bool = false
     var body: some Scene {
         WindowGroup {
-            MainView()
+                MainView()
         }
     }
 }
