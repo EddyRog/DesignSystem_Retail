@@ -11,23 +11,23 @@ struct TabViewComponent: View {
 
 
     var body: some View {
-            NavigationView {
-                List {
-                    NavigationLink("CardView") {
-                        DSCardView00(imageName: "EmptyPicture", title: "EmptyPicture")
-                    }
-                    NavigationLink("Home") {
-                        TabViewHome()
-                    }
-                    NavigationLink("Home Details") {
-                        DSCardViewDetails()
-                    }
+
+        NavigationView {
+            List {
+                NavigationLink("CardView") {
+                    DSCardView(imageName: "EmptyPicture", title: "EmptyPicture")
+                }
+                NavigationLink("Home") {
+                    TabViewHome()
+                }
+                NavigationLink("Home Details") {
+                    DSCardViewDetails()
                 }
             }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Component")
+        }
+        .listStyle(GroupedListStyle())
+        .navigationTitle("Component")
     }
-
 }
 
 // ⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬⌬

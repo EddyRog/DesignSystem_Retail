@@ -7,33 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C8AC998128CB257200BFD9DD /* TestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC998028CB257200BFD9DD /* TestUI.swift */; };
 		C8AC998328CB7F7900BFD9DD /* TabViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC998228CB7F7900BFD9DD /* TabViewHome.swift */; };
 		C8AC998528CB809000BFD9DD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AC998428CB809000BFD9DD /* Colors.xcassets */; };
 		C8AC998728CB907800BFD9DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AC998628CB907800BFD9DD /* Images.xcassets */; };
-		C8AC998928CB9A2300BFD9DD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC998828CB9A2300BFD9DD /* Helpers.swift */; };
-		C8AC999028CF35CF00BFD9DD /* DSCardView00.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC998F28CF35CF00BFD9DD /* DSCardView00.swift */; };
+		C8AC998928CB9A2300BFD9DD /* DS+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC998828CB9A2300BFD9DD /* DS+Helpers.swift */; };
+		C8AC999028CF35CF00BFD9DD /* DSCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC998F28CF35CF00BFD9DD /* DSCardView.swift */; };
 		C8AC999228CF365900BFD9DD /* DSHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999128CF365900BFD9DD /* DSHomeHeader.swift */; };
 		C8AC999428CF37B700BFD9DD /* DSCardViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999328CF37B700BFD9DD /* DSCardViewDetails.swift */; };
+		C8AC999628CF4D1C00BFD9DD /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999528CF4D1C00BFD9DD /* Seeds.swift */; };
+		C8AC999828CF4F6600BFD9DD /* DSHomeHeader01.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999728CF4F6600BFD9DD /* DSHomeHeader01.swift */; };
+		C8AC999A28CF5BED00BFD9DD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999928CF5BED00BFD9DD /* TestView.swift */; };
+		C8AC999F28CF7E1000BFD9DD /* DSCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999E28CF7E1000BFD9DD /* DSCardModel.swift */; };
+		C8AC99A128CF7E3800BFD9DD /* DSCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC99A028CF7E3800BFD9DD /* DSCardList.swift */; };
 		C8CCF6D328C8A25800AF68EA /* DesignSystemRetailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6D228C8A25800AF68EA /* DesignSystemRetailApp.swift */; };
 		C8CCF6D528C8A25800AF68EA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6D428C8A25800AF68EA /* MainView.swift */; };
 		C8CCF6D728C8A25A00AF68EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8CCF6D628C8A25A00AF68EA /* Assets.xcassets */; };
 		C8CCF6DA28C8A25A00AF68EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8CCF6D928C8A25A00AF68EA /* Preview Assets.xcassets */; };
 		C8CCF6E428C8C23400AF68EA /* UtilsDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6E328C8C23400AF68EA /* UtilsDesignSystem.swift */; };
 		C8CCF6E628C8D03100AF68EA /* TabViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6E528C8D03100AF68EA /* TabViewComponent.swift */; };
-		C8CCF6EB28C8D1A700AF68EA /* HelperDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6EA28C8D1A700AF68EA /* HelperDebug.swift */; };
+		C8CCF6EB28C8D1A700AF68EA /* Debug+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6EA28C8D1A700AF68EA /* Debug+Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C8AC998028CB257200BFD9DD /* TestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUI.swift; sourceTree = "<group>"; };
 		C8AC998228CB7F7900BFD9DD /* TabViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewHome.swift; sourceTree = "<group>"; };
 		C8AC998428CB809000BFD9DD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C8AC998628CB907800BFD9DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C8AC998828CB9A2300BFD9DD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		C8AC998828CB9A2300BFD9DD /* DS+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DS+Helpers.swift"; sourceTree = "<group>"; };
 		C8AC998A28CC0E3800BFD9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C8AC998F28CF35CF00BFD9DD /* DSCardView00.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardView00.swift; sourceTree = "<group>"; };
+		C8AC998F28CF35CF00BFD9DD /* DSCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardView.swift; sourceTree = "<group>"; };
 		C8AC999128CF365900BFD9DD /* DSHomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHomeHeader.swift; sourceTree = "<group>"; };
 		C8AC999328CF37B700BFD9DD /* DSCardViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardViewDetails.swift; sourceTree = "<group>"; };
+		C8AC999528CF4D1C00BFD9DD /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
+		C8AC999728CF4F6600BFD9DD /* DSHomeHeader01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHomeHeader01.swift; sourceTree = "<group>"; };
+		C8AC999928CF5BED00BFD9DD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		C8AC999E28CF7E1000BFD9DD /* DSCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardModel.swift; sourceTree = "<group>"; };
+		C8AC99A028CF7E3800BFD9DD /* DSCardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardList.swift; sourceTree = "<group>"; };
 		C8CCF6CF28C8A25800AF68EA /* DesignSystemRetail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSystemRetail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CCF6D228C8A25800AF68EA /* DesignSystemRetailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemRetailApp.swift; sourceTree = "<group>"; };
 		C8CCF6D428C8A25800AF68EA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -41,7 +49,7 @@
 		C8CCF6D928C8A25A00AF68EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8CCF6E328C8C23400AF68EA /* UtilsDesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsDesignSystem.swift; sourceTree = "<group>"; };
 		C8CCF6E528C8D03100AF68EA /* TabViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewComponent.swift; sourceTree = "<group>"; };
-		C8CCF6EA28C8D1A700AF68EA /* HelperDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperDebug.swift; sourceTree = "<group>"; };
+		C8CCF6EA28C8D1A700AF68EA /* Debug+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Debug+Views.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,14 +63,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C8AC997F28CB255F00BFD9DD /* TestUI */ = {
-			isa = PBXGroup;
-			children = (
-				C8AC998028CB257200BFD9DD /* TestUI.swift */,
-			);
-			path = TestUI;
-			sourceTree = "<group>";
-		};
 		C8AC998B28CF351C00BFD9DD /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,29 +76,57 @@
 			isa = PBXGroup;
 			children = (
 				C8AC998E28CF358F00BFD9DD /* Components */,
-				C8AC998D28CF357700BFD9DD /* Helpers */,
-				C8CCF6E228C8A64E00AF68EA /* Utils */,
+				C8CCF6E228C8A64E00AF68EA /* DS+Utils */,
+				C8AC998D28CF357700BFD9DD /* DS+Helpers */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
-		C8AC998D28CF357700BFD9DD /* Helpers */ = {
+		C8AC998D28CF357700BFD9DD /* DS+Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C8AC998828CB9A2300BFD9DD /* Helpers.swift */,
-				C8CCF6EA28C8D1A700AF68EA /* HelperDebug.swift */,
+				C8AC998828CB9A2300BFD9DD /* DS+Helpers.swift */,
 			);
-			path = Helpers;
+			path = "DS+Helpers";
 			sourceTree = "<group>";
 		};
 		C8AC998E28CF358F00BFD9DD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C8AC998F28CF35CF00BFD9DD /* DSCardView00.swift */,
-				C8AC999128CF365900BFD9DD /* DSHomeHeader.swift */,
-				C8AC999328CF37B700BFD9DD /* DSCardViewDetails.swift */,
+				C8AC999C28CF7C3000BFD9DD /* Header */,
+				C8AC999B28CF7B7700BFD9DD /* Card */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C8AC999B28CF7B7700BFD9DD /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				C8AC999E28CF7E1000BFD9DD /* DSCardModel.swift */,
+				C8AC99A028CF7E3800BFD9DD /* DSCardList.swift */,
+				C8AC998F28CF35CF00BFD9DD /* DSCardView.swift */,
+				C8AC999328CF37B700BFD9DD /* DSCardViewDetails.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		C8AC999C28CF7C3000BFD9DD /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				C8AC999128CF365900BFD9DD /* DSHomeHeader.swift */,
+				C8AC999728CF4F6600BFD9DD /* DSHomeHeader01.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		C8AC999D28CF7CE900BFD9DD /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C8AC999928CF5BED00BFD9DD /* TestView.swift */,
+				C8AC999528CF4D1C00BFD9DD /* Seeds.swift */,
+				C8CCF6EA28C8D1A700AF68EA /* Debug+Views.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		C8CCF6C628C8A25800AF68EA = {
@@ -124,7 +152,6 @@
 				C8CCF6E028C8A3A300AF68EA /* Delegate */,
 				C8CCF6E128C8A3CB00AF68EA /* Views */,
 				C8CCF6D628C8A25A00AF68EA /* Assets.xcassets */,
-				C8AC997F28CB255F00BFD9DD /* TestUI */,
 				C8CCF6D828C8A25A00AF68EA /* Preview Content */,
 				C8AC998428CB809000BFD9DD /* Colors.xcassets */,
 				C8AC998628CB907800BFD9DD /* Images.xcassets */,
@@ -154,16 +181,17 @@
 				C8CCF6D428C8A25800AF68EA /* MainView.swift */,
 				C8AC998B28CF351C00BFD9DD /* Tabs */,
 				C8AC998C28CF354900BFD9DD /* DesignSystem */,
+				C8AC999D28CF7CE900BFD9DD /* Support */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C8CCF6E228C8A64E00AF68EA /* Utils */ = {
+		C8CCF6E228C8A64E00AF68EA /* DS+Utils */ = {
 			isa = PBXGroup;
 			children = (
 				C8CCF6E328C8C23400AF68EA /* UtilsDesignSystem.swift */,
 			);
-			path = Utils;
+			path = "DS+Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,17 +266,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8AC999F28CF7E1000BFD9DD /* DSCardModel.swift in Sources */,
+				C8AC999A28CF5BED00BFD9DD /* TestView.swift in Sources */,
 				C8AC999228CF365900BFD9DD /* DSHomeHeader.swift in Sources */,
+				C8AC99A128CF7E3800BFD9DD /* DSCardList.swift in Sources */,
 				C8CCF6D528C8A25800AF68EA /* MainView.swift in Sources */,
-				C8AC999028CF35CF00BFD9DD /* DSCardView00.swift in Sources */,
-				C8AC998928CB9A2300BFD9DD /* Helpers.swift in Sources */,
+				C8AC999628CF4D1C00BFD9DD /* Seeds.swift in Sources */,
+				C8AC999028CF35CF00BFD9DD /* DSCardView.swift in Sources */,
+				C8AC998928CB9A2300BFD9DD /* DS+Helpers.swift in Sources */,
 				C8CCF6D328C8A25800AF68EA /* DesignSystemRetailApp.swift in Sources */,
 				C8AC998328CB7F7900BFD9DD /* TabViewHome.swift in Sources */,
 				C8CCF6E628C8D03100AF68EA /* TabViewComponent.swift in Sources */,
 				C8AC999428CF37B700BFD9DD /* DSCardViewDetails.swift in Sources */,
+				C8AC999828CF4F6600BFD9DD /* DSHomeHeader01.swift in Sources */,
 				C8CCF6E428C8C23400AF68EA /* UtilsDesignSystem.swift in Sources */,
-				C8AC998128CB257200BFD9DD /* TestUI.swift in Sources */,
-				C8CCF6EB28C8D1A700AF68EA /* HelperDebug.swift in Sources */,
+				C8CCF6EB28C8D1A700AF68EA /* Debug+Views.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
