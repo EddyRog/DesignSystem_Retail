@@ -16,12 +16,13 @@ struct TabViewComponent: View {
                     NavigationLink("CardView") {
                         DSCardView00(imageName: "EmptyPicture", title: "EmptyPicture")
                     }
-                    NavigationLink("OtherView") {
-                        Text("OtherView")
+                    NavigationLink("Home") {
+                        TabViewHome()
+                    }
+                    NavigationLink("Home Details") {
+                        DSCardViewDetails()
                     }
                 }
-                
-
             }
             .listStyle(GroupedListStyle())
             .navigationTitle("Component")

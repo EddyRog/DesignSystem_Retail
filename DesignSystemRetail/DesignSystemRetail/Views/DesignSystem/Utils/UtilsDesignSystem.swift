@@ -119,10 +119,17 @@ public enum DSRadiusSize {
 /// ▶ Define styles for typography.
 public enum DSFontStyle: String, CaseIterable {
     case title
+    case subTitle
+    case body
+
     public var font: Font {
         switch self {
             case .title:
                 return Font.largeTitle.bold()
+            case .subTitle:
+                return Font.body.bold()
+            case .body:
+                return Font.caption
         }
     }
 }

@@ -13,7 +13,8 @@ struct DesignSystemRetailApp: App {
 
     var body: some Scene {
         WindowGroup {
-                MainView()
+//                MainView()
+            DSCardViewDetails()
         }
     }
 
