@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// ==================
+// MARK: - Cropping Images
+// ==================
 /// Common aspect ratios
 public enum AspectRatio: CGFloat {
     case square = 1
@@ -54,4 +57,25 @@ public extension Image {
 
 
 
+// ==================
+// MARK: - Status bar style light theme
+// ==================
+struct LightStatusBarModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .onAppear {
+                UIApplication.shared.statusBarStyle = .lightContent
+            }
+            .onDisappear {
+                UIApplication.shared.statusBarStyle = .darkContent
+            }
+    }
+}
+
+extension View {
+    /// ▶ Forces the light theme only for the current view.
+    func enableLightStatusBar() -> some View {
+        self.modifier(LightStatusBarModifier())
+    }
+}
 

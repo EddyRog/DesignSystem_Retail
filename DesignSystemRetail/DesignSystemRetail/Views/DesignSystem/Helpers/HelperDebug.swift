@@ -50,6 +50,3 @@ extension View {
         modifier(DebugViewColor(isOn: value))
     }
 }
-
-
-
