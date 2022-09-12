@@ -38,7 +38,6 @@ struct DebugViewColor: ViewModifier {
 }
 
 
-
 // !!!: ❎ Change The Value Here ❎
 //var isDebug = true
 var isDebug = false

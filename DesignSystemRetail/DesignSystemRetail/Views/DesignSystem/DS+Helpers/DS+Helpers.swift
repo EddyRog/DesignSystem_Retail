@@ -1,12 +1,84 @@
 //
-// Utils.swift
+// Helper+ResizeImage.swift
 // DesignSystemRetail
 // Created in 2022
 // Swift 5.0
 
 
 import SwiftUI
-import UIKit
+
+// ==================
+// MARK: - Cropping Images
+// ==================
+/// Common aspect ratios
+public enum AspectRatio: CGFloat {
+    case square = 1
+    case threeToFour = 0.75
+    case fourToThree = 1.75
+}
+
+/// Fit an image to a certain aspect ratio while maintaining its aspect ratio
+public struct FitToAspectRatio: ViewModifier {
+
+    private let aspectRatio: CGFloat
+
+    public init(_ aspectRatio: CGFloat) {
+        self.aspectRatio = aspectRatio
+    }
+
+    public init(_ aspectRatio: AspectRatio) {
+        self.aspectRatio = aspectRatio.rawValue
+    }
+
+    public func body(content: Content) -> some View {
+        ZStack {
+            Rectangle()
+                .fill(Color(.clear))
+                .aspectRatio(aspectRatio, contentMode: .fit)
+
+            content
+                .scaledToFill()
+                .layoutPriority(-1)
+        }
+        .clipped()
+    }
+}
+
+// Image extension that composes with the `.resizable()` modifier
+public extension Image {
+    func fitToAspectRatio(_ aspectRatio: CGFloat) -> some View {
+        self.resizable().modifier(FitToAspectRatio(aspectRatio))
+    }
+
+    func fitToAspectRatio(_ aspectRatio: AspectRatio) -> some View {
+        self.resizable().modifier(FitToAspectRatio(aspectRatio))
+    }
+}
+
+
+
+// ==================
+// MARK: - Status bar style light theme
+// ==================
+struct LightStatusBarModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .onAppear {
+                UIApplication.shared.statusBarStyle = .lightContent
+            }
+            .onDisappear {
+                UIApplication.shared.statusBarStyle = .darkContent
+            }
+    }
+}
+
+extension View {
+    /// ▶ Forces the light theme only for the current view.
+    func enableLightStatusBar() -> some View {
+        self.modifier(LightStatusBarModifier())
+    }
+}
+
 
 // ==================
 // MARK: - TabBar
@@ -69,92 +141,5 @@ extension UIColor {
             let blue:CGFloat = CGFloat( arc4random_uniform(UInt32(250)) )
             return UIColor.rgb(red: red, green: green, blue: blue)
         }
-    }
-}
-
-
-// ==================
-// MARK: - Spacing
-// ==================
-/// ▶ Spacing are used to position elements on the screen and layout within components.
-public enum DSSpacing {
-    /// none: 0
-    public static let none: Double = 0
-    /// xs: 4
-    public static let xs: Double = 4
-    /// s: 8
-    public static let s: Double = 8
-    /// m: 16
-    public static let m: Double = 16
-    /// l: 24
-    public static let l: Double = 24
-    /// xl: 32
-    public static let xl: Double = 32
-    /// xxl: 40
-    public static let xxl: Double = 40
-}
-
-/// ▶ FontSizing is used to the font size.
-public enum DSFontSize {
-    public static let xs: Double = 10
-    public static let s: Double = 13
-    public static let m: Double = 15 // body
-    public static let l: Double = 20 // subTitle
-    public static let xl: Double = 28 // title
-    public static let xxl: Double = 36
-}
-
-/// ▶ RadiusSize.
-public enum DSRadiusSize {
-    public static let small: Double = 10
-    public static let normal: Double = 20
-}
-
-
-
-
-// ==================
-// MARK: - DSFontStyle
-// ==================
-/// ▶ Define styles for typography.
-public enum DSFontStyle: String, CaseIterable {
-    case title
-    case subTitle
-    case body
-
-    public var font: Font {
-        switch self {
-            case .title:
-                return Font.largeTitle.bold()
-            case .subTitle:
-                return Font.body.bold()
-            case .body:
-                return Font.caption
-        }
-    }
-}
-extension View {
-    public func dsFontStyle(_ dsFontStyle: DSFontStyle) -> some View {
-        font(dsFontStyle.font)
-    }
-}
-
-
-// ==================
-// MARK: - Corner raduis custom
-// ==================
-extension View {
-    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( RoundedCorner(radius: radius, corners: corners) )
-    }
-}
-/// ▶ Define each corner with a size.
-struct RoundedCorner: Shape {
-    var radius: CGFloat = .infinity
-    var corners: UIRectCorner = .allCorners
-
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        return Path(path.cgPath)
     }
 }
