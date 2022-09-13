@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct DSHomeHeader01: View {
+    @State var image: String = "iphone-4"
+
     var body: some View {
         VStack {
-            Image("iphone-4")
+            Image(image)
                 .fitToAspectRatio(.fourToThree)
 
         }
-        .padding(.bottom, DSSpacing.xxl + 10)
+//        .padding(.bottom, DSSpacing.xxl + 10)
         .debugViewColor()
+        // if needed background gradien + png image
         .background {
             LinearGradient(colors: [
                 Color("Color-9"),

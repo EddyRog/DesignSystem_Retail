@@ -6,6 +6,7 @@
 
 
 import Foundation
+import SwiftUI
 
 // --- Model.
 struct DSCardModel: Identifiable, Codable, Hashable {

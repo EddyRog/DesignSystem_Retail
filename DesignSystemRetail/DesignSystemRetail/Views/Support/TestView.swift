@@ -27,7 +27,7 @@ struct TestView: View {
 
             }.sheet(isPresented: $showDetail) {
 
-                DSCardViewDetails()
+                DSCardViewDetails(title: "title", image: "")
             }
         }
     }

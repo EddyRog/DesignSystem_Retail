@@ -12,6 +12,7 @@ struct TabViewHome: View {
         VStack(spacing: DSSpacing.none) {
             DSHomeHeader()
             DSCardList()
+                
         }
         .enableLightStatusBar()
     }

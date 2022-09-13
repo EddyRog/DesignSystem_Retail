@@ -15,13 +15,13 @@ struct TabViewComponent: View {
         NavigationView {
             List {
                 NavigationLink("CardView") {
-                    DSCardView(imageName: "EmptyPicture", title: "EmptyPicture")
+                    DSCardView()
                 }
                 NavigationLink("Home") {
                     TabViewHome()
                 }
                 NavigationLink("Home Details") {
-                    DSCardViewDetails()
+                    DSCardViewDetails(title: "title", image: "")
                 }
             }
         }

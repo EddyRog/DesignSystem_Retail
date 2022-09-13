@@ -21,23 +21,23 @@ public enum DSSpacing {
     /// s: 8
     public static let s: Double = 8
     /// m: 16
-    public static let m: Double = 16
+//    public static let m: Double = 16
     /// l: 24
-    public static let l: Double = 24
+//    public static let l: Double = 24
     /// xl: 32
-    public static let xl: Double = 32
+//    public static let xl: Double = 32
     /// xxl: 40
     public static let xxl: Double = 40
 }
 
 /// ▶ FontSizing is used to the font size.
 public enum DSFontSize {
-    public static let xs: Double = 10
-    public static let s: Double = 13
-    public static let m: Double = 15 // body
-    public static let l: Double = 20 // subTitle
-    public static let xl: Double = 28 // title
-    public static let xxl: Double = 36
+//    public static let xs: Double = 10
+//    public static let s: Double = 13
+//    public static let m: Double = 15 // body
+//    public static let l: Double = 20 // subTitle
+//    public static let xl: Double = 28 // title
+//    public static let xxl: Double = 36
 }
 
 /// ▶ RadiusSize.
@@ -92,3 +92,29 @@ struct RoundedCorner: Shape {
         return Path(path.cgPath)
     }
 }
+
+
+
+/*
+
+ CardView
+ spacing 0
+ fontsize 14
+ line Limite 1
+ frame height 40
+ corner radius 20
+ shadow r6, x0 y2
+ padding all10
+
+ name image default = EmptyPicture
+ name title default = EmptyPicture
+
+
+
+
+DSSpacing
+ 	DSDetailsTitle
+ 		padding.s, xs, s
+ 		linelimite 2
+        dsfontstyle
+ */

@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct DSCardViewDetails: View {
+    @State var title: String
+    @State var image: String
+
     var body: some View {
         ZStack {
             VStack(spacing: DSSpacing.none) {
                 // MARK: - Header
-                DSHomeHeader01()
+                DSHomeHeader01(image: image)
 
                 Group {
                     // MARK: - Items
                     ScrollView {
                         // MARK: - Title
-                        DSDetailTitle()
+                        DSDetailTitle("\(title)")
 
                         // MARK: - Bloc (title + text)
                         DSDetailBlocDescription()
@@ -32,18 +35,22 @@ struct DSCardViewDetails: View {
                     .frame(maxWidth: .infinity)
                     .background(.white)
                     .cornerRadius(40, corners: [.topLeft,.topRight])
-                    //.background(Color("Color-3")) // yellow behind corners
+//                    .background(Color("Color-3")) // yellow behind corners
                 }
-                .offset(y: -DSSpacing.xxl)
+                .offset(y: -40)
+//                .offset(x: 40)
+                .padding(.bottom, -40)
             }
+
         }
         .enableLightStatusBar()
     }
 }
 
 struct DSCardViewDetails_Previews: PreviewProvider {
+
     static var previews: some View {
-        DSCardViewDetails()
+        DSCardViewDetails(title: "", image: "")
     }
 }
 
@@ -51,10 +58,15 @@ struct DSCardViewDetails_Previews: PreviewProvider {
 // ==================
 // MARK: - SubView
 // ==================
-
 struct DSDetailTitle: View {
+    var title: String
+
+    internal init(_ title: String) {
+        self.title = title
+    }
+
     var body: some View {
-        Text("iPhone 14 Pro and iPhone 14 Pro Max®")
+        Text(title)
             .padding(.bottom, DSSpacing.s)
             .dsFontStyle(.title)
             .multilineTextAlignment(.leading)

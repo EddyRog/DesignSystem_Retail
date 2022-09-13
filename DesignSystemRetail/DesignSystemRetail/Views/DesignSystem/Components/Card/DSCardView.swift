@@ -18,7 +18,7 @@ struct DSCardView: View {
                 .fitToAspectRatio(.square)
 
             // --- Title or description.
-            VStack(spacing: 0) {
+            VStack(spacing: DSSpacing.none) {
                 Text(title)
                     .frame(maxWidth: .infinity)
                     .font(.system(size: 14))
@@ -37,7 +37,6 @@ struct DSCardView: View {
         .padding(.all, 10)
     }
 }
-
 
 struct DSCardView00_Previews: PreviewProvider {
     static var previews: some View {
