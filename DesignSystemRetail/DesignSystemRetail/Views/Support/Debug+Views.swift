@@ -10,7 +10,16 @@ import SwiftUI
 // ==================
 // MARK: - HELPER DEBUGER
 // ==================
-// Impl Modifier : UnderWood
+/// ▶ Allow to see the background with random color for each view that implement the modifier.
+/// DebugView or DebugViewColor
+/// DebugView => apply RandomBackgroundColor + maxWidth
+/// DebugView => apply only RandomBackgroundColor
+
+// !!!: ❎ Change The Value Here to enable/disable ❎
+//var isDebug = true
+var isDebug = false
+
+
 struct DebugView: ViewModifier {
 
     var isOn: Bool = false
@@ -38,9 +47,6 @@ struct DebugViewColor: ViewModifier {
 }
 
 
-// !!!: ❎ Change The Value Here ❎
-//var isDebug = true
-var isDebug = false
 // Add Modifier
 extension View {
     func debugView(isOn value: Bool = isDebug) -> some View {

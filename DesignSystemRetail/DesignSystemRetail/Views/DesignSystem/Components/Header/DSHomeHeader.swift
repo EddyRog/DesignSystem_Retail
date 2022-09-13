@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct DSHomeHeader: View {
-    var yOffsetCornerRadius: CGFloat = 40 // matches the rounded edge of DSCardList which comes on top of DSHomeHeader, it readjusts the content
+// used with TabViewHome
+struct DSHomeHeader00: View {
+
+    private var yOffsetCornerRadius: CGFloat = 40 // matches the rounded edge of DSCardList which comes on top of DSHomeHeader, it readjusts the content
     var body: some View {
         VStack {
             Image(systemName: "house")
@@ -26,7 +28,6 @@ struct DSHomeHeader: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.bottom, 40 + yOffsetCornerRadius)
-//        .background(Color("Color-3"))
-        .background(Color.red)
+        .background(Color("Color-3"))
     }
 }

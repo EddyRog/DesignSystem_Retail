@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct DSCardView: View {
+
+    // --- UIConfig.
     var imageName: String = "EmptyPicture"
-    var title: String = "EmptyPicture"
+    var title: String = "DefaultTitle"
 
     var body: some View {
         VStack(spacing: DSSpacing.none) {
-            // --- Image.
+            // --- CardViewImage.
             Image(imageName)
                 .fitToAspectRatio(.square)
 
-            // --- Title or description.
+            // --- CardViewTitle.
             VStack(spacing: DSSpacing.none) {
                 Text(title)
                     .frame(maxWidth: .infinity)
@@ -40,6 +42,6 @@ struct DSCardView: View {
 
 struct DSCardView00_Previews: PreviewProvider {
     static var previews: some View {
-        DSCardView(imageName: "EmptyPicture", title: "EmptyPicture")
+        DSCardView()
     }
 }

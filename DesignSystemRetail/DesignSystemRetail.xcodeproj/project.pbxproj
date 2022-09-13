@@ -16,7 +16,6 @@
 		C8AC999428CF37B700BFD9DD /* DSCardViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999328CF37B700BFD9DD /* DSCardViewDetails.swift */; };
 		C8AC999628CF4D1C00BFD9DD /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999528CF4D1C00BFD9DD /* Seeds.swift */; };
 		C8AC999828CF4F6600BFD9DD /* DSHomeHeader01.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999728CF4F6600BFD9DD /* DSHomeHeader01.swift */; };
-		C8AC999A28CF5BED00BFD9DD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999928CF5BED00BFD9DD /* TestView.swift */; };
 		C8AC999F28CF7E1000BFD9DD /* DSCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC999E28CF7E1000BFD9DD /* DSCardModel.swift */; };
 		C8AC99A128CF7E3800BFD9DD /* DSCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AC99A028CF7E3800BFD9DD /* DSCardList.swift */; };
 		C8CCF6D328C8A25800AF68EA /* DesignSystemRetailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCF6D228C8A25800AF68EA /* DesignSystemRetailApp.swift */; };
@@ -39,7 +38,6 @@
 		C8AC999328CF37B700BFD9DD /* DSCardViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardViewDetails.swift; sourceTree = "<group>"; };
 		C8AC999528CF4D1C00BFD9DD /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		C8AC999728CF4F6600BFD9DD /* DSHomeHeader01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSHomeHeader01.swift; sourceTree = "<group>"; };
-		C8AC999928CF5BED00BFD9DD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		C8AC999E28CF7E1000BFD9DD /* DSCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardModel.swift; sourceTree = "<group>"; };
 		C8AC99A028CF7E3800BFD9DD /* DSCardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardList.swift; sourceTree = "<group>"; };
 		C8CCF6CF28C8A25800AF68EA /* DesignSystemRetail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSystemRetail.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +120,6 @@
 		C8AC999D28CF7CE900BFD9DD /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				C8AC999928CF5BED00BFD9DD /* TestView.swift */,
 				C8AC999528CF4D1C00BFD9DD /* Seeds.swift */,
 				C8CCF6EA28C8D1A700AF68EA /* Debug+Views.swift */,
 			);
@@ -267,7 +264,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8AC999F28CF7E1000BFD9DD /* DSCardModel.swift in Sources */,
-				C8AC999A28CF5BED00BFD9DD /* TestView.swift in Sources */,
 				C8AC999228CF365900BFD9DD /* DSHomeHeader.swift in Sources */,
 				C8AC99A128CF7E3800BFD9DD /* DSCardList.swift in Sources */,
 				C8CCF6D528C8A25800AF68EA /* MainView.swift in Sources */,

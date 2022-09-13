@@ -10,9 +10,8 @@ import SwiftUI
 struct TabViewHome: View {
     var body: some View {
         VStack(spacing: DSSpacing.none) {
-            DSHomeHeader()
+            DSHomeHeader00()
             DSCardList()
-                
         }
         .enableLightStatusBar()
     }

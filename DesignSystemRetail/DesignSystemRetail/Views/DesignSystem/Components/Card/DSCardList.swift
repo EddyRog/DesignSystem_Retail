@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DSCardList: View {
+    
     // --- UIConfig.
     private var spacingLayoutCard: CGFloat {
         0
@@ -33,15 +34,15 @@ struct DSCardList: View {
 
     // --- Data.
     @State var datas = [
-        DSCardModel(image: "iphone-1", name: "Get for free"),
-        DSCardModel(image: "iphone-2", name: "Mac Book Pro 14"),
+        DSCardModel(image: "iphone-4", name: "New iPhone 14"),
+        DSCardModel(image: "iphone-2", name: "Mac Book Pro"),
         DSCardModel(image: "iphone-3", name: "Pay for your new Mac over time, interest-free with Apple Card"),
         DSCardModel(image: "iphone-1", name: "enjoy 3% Daily Cash back"),
         DSCardModel(image: "iphone-2", name: "Shop one on one with a Specialist online. Or reserve a shopping session at an Apple Store"),
         DSCardModel(image: "iphone-1", name: "We’ll help you discover the amazing things"),
         DSCardModel(image: "iphone-1", name: "We’ll help you discover the amazing things"),
     ]
-    @State var dataToPresent: DSCardModel?
+    @State private  var dataToPresent: DSCardModel?
 
     // --- UIConfig.
     var body: some View {

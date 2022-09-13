@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Used with CardViewDetails
 struct DSHomeHeader01: View {
     @State var image: String = "iphone-4"
 
@@ -14,10 +15,7 @@ struct DSHomeHeader01: View {
         VStack {
             Image(image)
                 .fitToAspectRatio(.fourToThree)
-
         }
-//        .padding(.bottom, DSSpacing.xxl + 10)
-        .debugViewColor()
         // if needed background gradien + png image
         .background {
             LinearGradient(colors: [

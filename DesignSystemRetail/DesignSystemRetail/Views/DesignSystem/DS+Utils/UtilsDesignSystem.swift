@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-
+// TODO: ❎ Must define correctly the design system utilies [WIP] ❎
 // ==================
 // MARK: - DSSpacing
 // ==================
@@ -92,29 +92,3 @@ struct RoundedCorner: Shape {
         return Path(path.cgPath)
     }
 }
-
-
-
-/*
-
- CardView
- spacing 0
- fontsize 14
- line Limite 1
- frame height 40
- corner radius 20
- shadow r6, x0 y2
- padding all10
-
- name image default = EmptyPicture
- name title default = EmptyPicture
-
-
-
-
-DSSpacing
- 	DSDetailsTitle
- 		padding.s, xs, s
- 		linelimite 2
-        dsfontstyle
- */

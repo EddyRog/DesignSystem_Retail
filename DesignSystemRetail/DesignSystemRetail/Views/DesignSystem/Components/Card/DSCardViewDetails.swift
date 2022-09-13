@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DSCardViewDetails: View {
-    @State var title: String
-    @State var image: String
+    @State var title: String = "Title"
+    @State var image: String = "EmptyPicture"
 
     var body: some View {
         ZStack {
@@ -35,10 +35,8 @@ struct DSCardViewDetails: View {
                     .frame(maxWidth: .infinity)
                     .background(.white)
                     .cornerRadius(40, corners: [.topLeft,.topRight])
-//                    .background(Color("Color-3")) // yellow behind corners
                 }
                 .offset(y: -40)
-//                .offset(x: 40)
                 .padding(.bottom, -40)
             }
 
@@ -50,7 +48,7 @@ struct DSCardViewDetails: View {
 struct DSCardViewDetails_Previews: PreviewProvider {
 
     static var previews: some View {
-        DSCardViewDetails(title: "", image: "")
+        DSCardViewDetails(title: "Iphone 14", image: "iphone-4")
     }
 }
 

@@ -9,19 +9,27 @@ import SwiftUI
 
 struct TabViewComponent: View {
 
-
     var body: some View {
 
         NavigationView {
             List {
+                NavigationLink("Header00") {
+                    DSHomeHeader00()
+                }
+                NavigationLink("Header01") {
+                    DSHomeHeader01()
+                }
                 NavigationLink("CardView") {
                     DSCardView()
+                }
+                NavigationLink("CardList") {
+                    DSCardList()
                 }
                 NavigationLink("Home") {
                     TabViewHome()
                 }
                 NavigationLink("Home Details") {
-                    DSCardViewDetails(title: "title", image: "")
+                    DSCardViewDetails(title: "title", image: "iphone-4")
                 }
             }
         }
