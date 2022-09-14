@@ -148,9 +148,9 @@
 				C8AC998A28CC0E3800BFD9DD /* Info.plist */,
 				C8CCF6E028C8A3A300AF68EA /* Delegate */,
 				C8CCF6E128C8A3CB00AF68EA /* Views */,
-				C8CCF6D628C8A25A00AF68EA /* Assets.xcassets */,
 				C8CCF6D828C8A25A00AF68EA /* Preview Content */,
 				C8AC998428CB809000BFD9DD /* Colors.xcassets */,
+				C8CCF6D628C8A25A00AF68EA /* Assets.xcassets */,
 				C8AC998628CB907800BFD9DD /* Images.xcassets */,
 			);
 			path = DesignSystemRetail;
